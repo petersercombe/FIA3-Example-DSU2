@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+
+{% block title %}Item{% endblock %}
+
+{% block content %}
+
+<br>
+  <div class="row ">
+    <div class="col-md-4">
+      <img src='/static/images/{{item[5]}}' class="img-fluid img-thumbnail" alt="{{item[1]}}: {{item[2]}}">
+    </div>
+    <div class="col-md-8">
+        <h5>{{item[1]}}</h5>
+        <p>{{item[2]}}</p>
+        {% if user %}
+            <p>Claimed by: </p>
+            Link to edit item
+        {% endif %}
+        <p><small class="text-muted">Last updated {{item[4]}}</small></p>
+      </div>
+    </div>
+
+
+{% endblock %}<html xmlns:mso="urn:schemas-microsoft-com:office:office" xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882"><head>
+<!--[if gte mso 9]><xml>
+<mso:CustomDocumentProperties>
+<mso:MediaServiceImageTags msdt:dt="string"></mso:MediaServiceImageTags>
+<mso:lcf76f155ced4ddcb4097134ff3c332f msdt:dt="string"></mso:lcf76f155ced4ddcb4097134ff3c332f>
+<mso:TaxCatchAll msdt:dt="string"></mso:TaxCatchAll>
+</mso:CustomDocumentProperties>
+</xml><![endif]-->
+</head>

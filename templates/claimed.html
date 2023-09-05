@@ -1,0 +1,43 @@
+{% extends "layout.html" %}
+
+{% block title %}Claimed Items{% endblock %}
+
+{% block content %}
+
+<div class="table-responsive">
+    <table class="table  table-hover">
+        <thead>
+            <tr>
+              <th scope="col" style="width:15%">Image</th>
+              <th scope="col">Title</th>
+              <th scope="col">Description</th>
+              <th scope="col">Date</th>
+              <th scope="col">Claimed By</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for index, data in lostProperty.items() %}
+        {% if data["claimed"] == True %}
+            <tr style="cursor:pointer" onclick="location.href='/item/{{index}}'">
+                  <td><img src='/static/images/thumb_{{data["image"]}}' class="img-fluid" alt="..."></td>
+                  <td>{{data["title"]}}</td>
+                  <td>{{data["description"]}}</td>
+                  <td>{{data["date"]}}</td>
+                  <td>{{data["claimedBy"]}}</td>
+            </tr>
+        {% endif %}
+        {% endfor %}
+        </tbody>
+  </table>
+</div>
+
+
+{% endblock %}<html xmlns:mso="urn:schemas-microsoft-com:office:office" xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882"><head>
+<!--[if gte mso 9]><xml>
+<mso:CustomDocumentProperties>
+<mso:MediaServiceImageTags msdt:dt="string"></mso:MediaServiceImageTags>
+<mso:lcf76f155ced4ddcb4097134ff3c332f msdt:dt="string"></mso:lcf76f155ced4ddcb4097134ff3c332f>
+<mso:TaxCatchAll msdt:dt="string"></mso:TaxCatchAll>
+</mso:CustomDocumentProperties>
+</xml><![endif]-->
+</head>

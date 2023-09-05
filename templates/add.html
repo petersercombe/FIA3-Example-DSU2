@@ -1,0 +1,35 @@
+{% extends "layout.html" %}
+
+{% block title %}Add Item{% endblock %}
+
+{% block content %}
+
+<form action="/add" method="POST" enctype="multipart/form-data">
+    <div class="mb-3">
+      <label for="title" class="form-label">Title</label>
+      <input type="text" class="form-control" id="title" name="title" required>
+    </div>
+    <div class="mb-3">
+      <label for="description" class="form-label">Description</label>
+      <textarea class="form-control" id="description" rows="3" name="description" required></textarea>
+    </div>
+    <div class="mb-3">
+      <label for="categoryID" class="form-label">Category</label>
+      <input type="text" class="form-control" id="categoryID" name="categoryID" required>
+    </div>
+    <div class="mb-3">
+      <label for="formFile" class="form-label">Image File</label>
+      <input class="form-control" type="file" id="formFile" name="image">
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+{% endblock %}<html xmlns:mso="urn:schemas-microsoft-com:office:office" xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882"><head>
+<!--[if gte mso 9]><xml>
+<mso:CustomDocumentProperties>
+<mso:MediaServiceImageTags msdt:dt="string"></mso:MediaServiceImageTags>
+<mso:lcf76f155ced4ddcb4097134ff3c332f msdt:dt="string"></mso:lcf76f155ced4ddcb4097134ff3c332f>
+<mso:TaxCatchAll msdt:dt="string"></mso:TaxCatchAll>
+</mso:CustomDocumentProperties>
+</xml><![endif]-->
+</head>
